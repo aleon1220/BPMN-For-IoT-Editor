@@ -2,11 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>BPMN Editor</title>
-    <!-- comment <script type="text/javascript" src="jquery-1.9.1.js"></script>
-      <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    -->
-    <!-- comment testing what happens if using latest jquery -->
-    <!-- <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script> -->
+    
     <script type="text/javascript" src="jquery-latest.js"></script>
     <script type="text/javascript" src="jquery-ui.js"></script>
 
@@ -147,16 +143,22 @@
                         <li>About</li>
                     </ul>
                 </li>
+                <li>Cloud Integration</li>
+                <li>Export</li>
+                <li>Import</li>
             </ul><!-- end mainmenu -->
         </div>
 
 <div class="info-box">Copyright extended work by Andres Leon</div>
 
+
+<section class="wrapper">
+
 <div class="xpdleditor-wrapper">
                 <table>
                     <tr>
                         <td>
-                            <div class="widgetbox-wrapper">
+                            <div class="widgetbox-wrapper" id="sidebar">
                                 <div class="widgetbox-header">Swimlanes</div>
                                 <div class="widgetbox-content">
                                     <table class="widgetbox-table">
@@ -195,7 +197,7 @@
 
                                             <td class="hover" title="User Task" >
                                            	<img class="widgetbox-activity bpmn-widget" data-widget-id="2" data-widget-name="userTask" data-widget-type="activity" src="bpmn pic/user-task.png" alt="" />
-                                            </td>
+                                            </td>                                            
 
                                         </tr>
                                         <tr>
@@ -453,14 +455,18 @@
                                 </div>
                             </div>
                         </td>
-                        <td>
- 									<!-- My test code -->
-                           <!--<div><a href="" id="link" download="code.jpg">Download File</a></div>-->
-  							      <!-- End My test code -->
+                        <td id="content">
+ 									
 
                             <div class="xpdleditor-frame">
+                                <button type="button" id="sidebarCollapse" class="btn navbar-btn">
+                                    <i class="glyphicon glyphicon-align-left"></i>
+                
+                                </button>
                                 <div class="frame-wrapper" id="canvas">
                                 <!--TEST - This is the content-->
+                                
+
                                 </div>
                             </div>
                         </td>
@@ -471,13 +477,16 @@
                       </td>
 
                     </tr>
-                </table>
-
+                </table> 
+                
                 <div class="div-container">
                   <div class="easyui-ribbon">
                       <div title="BPMN Properties">
+                        <span class="bottom-collapse">
+                            <button id="button" onclick="showhide()"><i class="glyphicon glyphicon-align-left content3"></i></button>                            
+                        </span>
 
-                        <div class="ribbon-group">
+                        <div class="ribbon-group" id="newpost">
 
                           <div id="table" class="table-editable">
                             <span class="table-add glyphicon glyphicon-plus"></span>
@@ -490,9 +499,9 @@
                                 <th></th>
                               </tr>
                               <tr>
-                                <td contenteditable="true">Storage</td>
-                                <td contenteditable="true">2024</td>
-                                <td contenteditable="true">Terabytes</td>
+                                <td contenteditable="true" class="edit-data">Storage</td>
+                                <td contenteditable="true" class="edit-data">2024</td>
+                                <td contenteditable="true" class="edit-data">Terabytes</td>
                                 <td>
                                   <select>
                                     <option value="String">Text</option>
@@ -542,30 +551,41 @@
                         <script  src="js/index.js"></script>
                       </div>
                   </div>
-
-                </div>
-
-
-
+            </div>      
+                <!--/ xpdleditor-wrapper -->
+    </section>        
 
 
-</div>
-<!-- My test code -->
-    <!-- <script type="text/JavaScript">
-    window.onload = function() {
-      var canvas = document.getElementById('canvas');
-      canvas.value = window.onload + '';
 
-     // document.getElementById('link').onclick = function(code) {
-      //  this.href = 'data:text/plain;charset=utf-8,'
-      //    + encodeURIComponent(canvas.value);
-      //};
-    };
 
-    <!-- main();-->
 
-    </script> -->
- <!-- End My test code -->
+    
 
+    <script type="text/javascript">
+       $(document).ready(function () {
+                 $('#sidebarCollapse').on('click', function () {
+                     $('#sidebar').toggleClass('active');
+                 });
+             });
+
+
+       /*newspost hidden*/
+
+function showhide()
+     {
+           var div = document.getElementById("newpost");
+    if (div.style.display !== "none") {
+        div.style.display = "none";
+    }
+    else {
+        div.style.display = "block";
+    }
+     }
+
+
+    
+
+
+    </script>
 </body>
 </html>

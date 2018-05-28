@@ -5,6 +5,7 @@
     if (SVG.supported)
       return new SVG.Doc(element)
   }
+
   
   // Default namespaces
   SVG.ns = 'http://www.w3.org/2000/svg'
@@ -2190,9 +2191,12 @@
       'font-size':    16
     , 'font-family':  'Helvetica, Arial, sans-serif'
     , 'text-anchor':  'start'
+    , 'text-align' :  'center'
+    , 'margin'     :  '0px auto'
+
     }
     
-    this._leading = new SVG.Number('1.2em')
+    this._leading = new SVG.Number('8em')    
     this._rebuild = true
   }
   

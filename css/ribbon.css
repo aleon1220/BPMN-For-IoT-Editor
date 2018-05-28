@@ -4,6 +4,7 @@
 }
 .ribbon-group{
 	position:relative;
+
 	//height:130px;
 	float:left;
 	border-style:solid;
@@ -14,6 +15,7 @@
 	-webkit-box-sizing:content-box;
 	box-sizing:content-box;
 }
+
 .ribbon-group-title{
 	position:absolute;
 	left:0;

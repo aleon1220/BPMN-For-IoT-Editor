@@ -1,3 +1,6 @@
+
+
+
 (function (SVG, $, CodeMirror, vkbeautify) {
     var bpmnEditor = (function (SVG, $, vkbeautify) {
         var constants = {
@@ -144,10 +147,16 @@
                     var widget = getItemByNode(this);
                     contextmenu.show(
                         {
-                        "Delete": function () { deletewidget(widget); $(this).parent().remove(); },
+                        "Delete": function () {                          
+                            
+                         deletewidget(widget);
+                        $(this).parent().remove(); 
+                     },
                         "Bring on top": function () { bringOntop(widget); $(this).parent().remove(); },
                         "Duplicate": function () { bringOntop(widget); $(this).parent().remove(); },
-                        "Properties": function () { bringOntop(widget); $(this).parent().remove(); },
+                        "Properties": function () {
+                            $('.edit-data').css('border','2px solid red');
+                         bringOntop(widget); $(this).parent().remove(); },
                         }, getCursorPos(event).x, getCursorPos(event).y
                     );
                     return false;
@@ -317,6 +326,8 @@
                     }
                 },
 
+
+
                 show: function (pos, text, callback) {
                     closePopupWindows();
                     $("<div></div>")
@@ -342,7 +353,10 @@
                                         $(this).parent().parent().remove();
                                     })))
                             .appendTo(parentElem)
-                            .css({ left: pos.x, top: pos.y })
+                            .css('text-align', 'center')
+                            
+
+                            .css({ left: pos.x, top: pos.y,})
 
                             .keypress(function (e) {
                                 if (e.keyCode == 27)//escape

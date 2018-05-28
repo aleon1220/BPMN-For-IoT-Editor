@@ -38,3 +38,71 @@
 .table-add:hover {
   color: #0b0;
 }
+
+
+
+
+/*my css*/
+
+.wrapper{
+  display: flex;
+    align-items: stretch;
+
+}
+
+#sidebar {
+    min-width: 200px;
+    max-width: 200px;    
+    transition: all 0.3s;
+}
+
+#sidebar.active {
+    display:inline-block;
+    min-width:50px;
+    max-width: 50px;
+    margin-right: 1em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.easyui-ribbon{
+  width: 1280px !important;
+}
+#content {        
+    transition: all 0.3s;
+    position: absolute;
+
+}
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+#sidebar.active a[aria-expanded="false"]::before, #sidebar.active a[aria-expanded="true"]::before {
+    top: auto;
+    bottom: 5px;
+    right: 50%;
+    -webkit-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    transform: translateX(50%);
+}
+
+
+.bottom-collapse{
+  position: absolute;
+  top: 10px;
+  left: 95%;  
+}
+
+#newpost.active{
+  display: none;
+}
+
+
+
+#newpost{
+  transition: 0.5s all;
+  position: relative;
+}
+
+
