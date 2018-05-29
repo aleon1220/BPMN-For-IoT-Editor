@@ -1,7 +1,6 @@
 .div-container{
     position: relative;
-//  left: 16%;
-    margin-left: 200px;
+//  left: 16%;    
     width: 85%;
 }
 
@@ -58,16 +57,17 @@
 
 #sidebar.active {
     display:inline-block;
-    min-width:50px;
-    max-width: 50px;
-    margin-right: 1em;
+    min-width:0px;
+    max-width: 0px;
+    /*margin-right: 1em;*/
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
 .easyui-ribbon{
-  width: 1280px !important;
+  width: 1480px !important;
+  position: relative;
 }
 #content {        
     transition: all 0.3s;
@@ -87,22 +87,16 @@ a[data-toggle="collapse"] {
     transform: translateX(50%);
 }
 
-
+/*.properties-btn{
+  position: fixed;  
+  right: 45%;
+  top: 57%;
+}*/
 .bottom-collapse{
   position: absolute;
-  top: 10px;
-  left: 95%;  
+  top: 5px;
+  right: 2em;
 }
 
-#newpost.active{
-  display: none;
-}
-
-
-
-#newpost{
-  transition: 0.5s all;
-  position: relative;
-}
 
 
