@@ -150,16 +150,25 @@
                         "Delete": function () {                          
                             
                          deletewidget(widget);
+                         var activity_id = widget.elem.node.id;                                                        
+                         $('#table').find('.'+activity_id).remove();
                         $(this).parent().remove(); 
                      },
+
+
                         "Bring on top": function () { bringOntop(widget); $(this).parent().remove(); },
                         "Duplicate": function () { bringOntop(widget); $(this).parent().remove(); },
                         "Properties": function () {
-                            $('.edit-data').css('border','2px solid red');
-                         bringOntop(widget); $(this).parent().remove(); },
+                         var activity_id = widget.elem.node.id;                            
+                            $('#table').find('td').css('border','');  
+                            $('#table').find('.'+activity_id).find('td').css('border','2px solid red');  
+                         },
+
                         }, getCursorPos(event).x, getCursorPos(event).y
                     );
                     return false;
+
+
                 },
 
                 show: function (items, x, y) {

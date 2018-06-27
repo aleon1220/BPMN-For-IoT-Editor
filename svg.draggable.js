@@ -14,6 +14,12 @@ SVG.extend(SVG.Element, {
     /* ensure constraint object */
     constraint = constraint || {}
 
+    //append tr at every drag
+    var $dradClass = this.node.id;
+    var $TABLE = $('#table');
+    var $clone = $TABLE.find('tr.hide').clone(true).removeClass('hide table-line').addClass($dradClass);
+    $TABLE.find('table').append($clone);
+
     /* start dragging */
     start = function(event) {
       event = event || SVG.window.event
@@ -66,7 +72,7 @@ SVG.extend(SVG.Element, {
     }
 
     /* while dragging */
-    drag = function(event) {
+    drag = function(event) {      
       event = event || SVG.window.event
 
       if (element.startEvent) {
@@ -112,7 +118,7 @@ SVG.extend(SVG.Element, {
     }
 
     /* when dragging ends */
-    end = function(event) {
+    end = function(event) {      
       event = event || SVG.window.event
 
       /* calculate move position */

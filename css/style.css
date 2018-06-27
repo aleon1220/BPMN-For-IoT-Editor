@@ -87,15 +87,14 @@ a[data-toggle="collapse"] {
     transform: translateX(50%);
 }
 
-/*.properties-btn{
-  position: fixed;  
-  right: 45%;
-  top: 57%;
-}*/
+
 .bottom-collapse{
   position: absolute;
   top: 5px;
   right: 2em;
+}
+.bpmn-property-active{
+  border:2px solid red;
 }
 
 
