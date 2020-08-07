@@ -1,6 +1,10 @@
 # IoT-Enabled-BPMN-Editor
-IoT-Enabled-BPMN-Editor. Continuing and extending work from another BPMN modeler.
+IoT-Enabled-BPMN-Editor. Continuing and extending work from BPMN modeler by @AliReza and @Kussum
 
+## Formulated Questions
+- Is it possible to model IoT processes with BPMN?
+- How to implement and deploy the model to make it usable in IoT devices?
+- What component orchestrates the BPM flow with IoT devices?
 
 
 Work  | description | Demo | Repo
@@ -13,3 +17,5 @@ BPMN exentsion adding IoT attributes  | incorporates IoT modelling facility with
   [ef3d218f]: http://abforce.github.io/demo/xpdleditor/main.html "Demo"
   [7e9d069f]: https://pradeerat.github.io/IoT-aware-BPMN-Editor/ "Demo"
   [c772a22c]: https://github.com/pradeerat/IoT-aware-BPMN-Editor "Modeler Extension"
+
+credits to Ali Reza Barkhordari [LinkedIm](https://www.linkedin.com/in/ali-reza-barkhordari)
